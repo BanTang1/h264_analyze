@@ -90,7 +90,7 @@ public class H264Player implements Runnable {
 
                 //得到数据
                 MediaCodec.BufferInfo outputBufferInfo = new MediaCodec.BufferInfo();
-                outputBufferIndex = mediaCodec.dequeueOutputBuffer(outputBufferInfo, 1000);
+                outputBufferIndex = mediaCodec.dequeueOutputBuffer(outputBufferInfo, 100000);
                 if (outputBufferIndex >= 0) {
                     // 释放并输出到Surface中
                     mediaCodec.releaseOutputBuffer(outputBufferIndex, true);
